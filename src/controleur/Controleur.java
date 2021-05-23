@@ -1,4 +1,4 @@
-package controleur;
+/*package controleur;
 
 import vue.PanelAtlantique;
 import vue.PanelChoix;
@@ -8,7 +8,7 @@ import vue.PanelManche;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Controleur implements ActionListener {
+public class Controleur{ //implements ActionListener {
     PanelChoix panelChoix;
     PanelAtlantique panelAtlantique;
     PanelManche panelManche;
@@ -21,7 +21,7 @@ public class Controleur implements ActionListener {
         panelMain = parPanelMain;
         panelChoix.enregistreEcouteur(this);
     }
-
+/*
     public void actionPerformed (ActionEvent parEvent) {
         if (parEvent.getSource() == panelChoix.ChoixDePort) {
             PanelChoix ChoixDePort = new PanelChoix(panelChoix.ChoixDePort.getSelectedItem());
@@ -36,5 +36,5 @@ public class Controleur implements ActionListener {
                 panelChoix.annonceChoix.setText("Vous n'avez pas choisi de port");
         }
     }
-}
+}*/
 

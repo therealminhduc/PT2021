@@ -1,6 +1,6 @@
 package vue;
 
-import controleur.Controleur;
+//import controleur.Controleur;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,9 +18,9 @@ public class PanelChoix extends JPanel {
     JLabel item1;
     JLabel item2;
 
-    Controleur controleur;
+    //Controleur controleur;
 
-    public PanelChoix(Object selectedItem) {
+    public PanelChoix() {
         //PanelChoix s = new PanelChoix();
 
         setLayout(new GridBagLayout());
@@ -57,12 +57,13 @@ public class PanelChoix extends JPanel {
         contraintes.gridy = 4;
         contraintes.gridx = 1;
         this.add(annonceChoix, contraintes);
-
+/*
         item1 = new JLabel("Atlantique sélectionné");
         item1.setForeground(Color.BLUE);
         item2 = new JLabel("Manche sélectionné");
-        item2.setForeground(Color.BLUE);
+        item2.setForeground(Color.BLUE);*/
     }
+}
 
     /*public void itemStateChanged(ItemEvent e) {
         if (e.getSource() == ChoixDePort) {
@@ -70,8 +71,8 @@ public class PanelChoix extends JPanel {
             item1.setText(ChoixDePort.getSelectedItem() + "selected");
         }
     }*/
-
+/*
     public void enregistreEcouteur (Controleur controleur) {
         ChoixDePort.addActionListener((ActionListener) controleur);
     }
-}
+}*/

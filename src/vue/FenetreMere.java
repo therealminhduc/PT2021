@@ -11,7 +11,7 @@ public class FenetreMere extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
         //setLocation(400,300);
-        setSize(400,400);
+        setSize(700,700);
     }
 
     public static void main (String  [] args) {
