@@ -10,6 +10,10 @@ public class PanelChoix extends JPanel {
     JLabel labelChoisi;
 
     JLabel labelChoixDePort;
+
+    JButton boutonAtlantique;
+    JButton boutonManche;
+
     public JComboBox<String> ChoixDePort;
     String[] lesPorts = {"Atlantique", "Manche"};
 
@@ -29,7 +33,7 @@ public class PanelChoix extends JPanel {
         contraintes.anchor = GridBagConstraints.WEST;
 
         //labelChoisi
-        labelChoisi = new JLabel("BIENVENUE AU CALENDRIER DES MARRÉES");
+        labelChoisi = new JLabel("BIENVENUE AU CALENDRIER DES MARÉES");
         contraintes.gridx = 0;
         contraintes.gridy = 0;
         contraintes.gridwidth = 3;
@@ -44,6 +48,18 @@ public class PanelChoix extends JPanel {
 
         //ChoixDePort.addItemListener(s);
 
+        boutonAtlantique = new JButton("ATLANTIQUE");
+        contraintes.gridx = 1; contraintes.gridy = 3;
+        boutonAtlantique.setBackground(Color.LIGHT_GRAY);
+        this.add(boutonAtlantique, contraintes);
+
+        boutonManche = new JButton("MANCHE");
+        contraintes.gridx = 2; contraintes.gridy = 4;
+        boutonManche.setBackground(Color.LIGHT_GRAY);
+        this.add(boutonManche, contraintes);
+
+
+        /*
         //ChoixDePort
         ChoixDePort = new JComboBox<String>(lesPorts);
         ChoixDePort.getEditor().getEditorComponent().setBackground(Color.GRAY);
@@ -51,6 +67,7 @@ public class PanelChoix extends JPanel {
         contraintes.gridy = 3;
         contraintes.gridwidth = 2;
         this.add(ChoixDePort, contraintes);
+         */
 
         //zone annonceChoix
         annonceChoix = new JLabel("");
