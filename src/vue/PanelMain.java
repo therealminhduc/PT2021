@@ -1,25 +1,28 @@
 package vue;
-
-//import controleur.Controleur;
-
+import controleur.Controleur;
 import javax.swing.*;
 import java.awt.*;
 
 public class PanelMain extends JPanel {
-    PanelChoix panelChoix;
-    PanelCalendrier panelCalendrier;
+    PanelChoix panelChoix = new PanelChoix();
     PanelAtlantique panelAtlantique = new PanelAtlantique();
     PanelManche panelManche = new PanelManche();
+    PanelBienvenue panelBienvenue = new PanelBienvenue();
+    JPanel panelCentre = new JPanel();
 
     public PanelMain () {
         setLayout(new BorderLayout(20,20));
-        panelChoix = new PanelChoix();
-        panelCalendrier = new PanelCalendrier();
-        //panelCentre = panelCalendrier;
+        panelCentre = panelBienvenue;
         this.add(panelChoix,BorderLayout.NORTH);
-        this.add(panelCalendrier, BorderLayout.CENTER);
+        this.add(panelCentre, BorderLayout.CENTER);
         setBackground(Color.gray);
+        Controleur controleur = new Controleur(panelBienvenue, panelChoix, this, panelAtlantique, panelManche);
+    }
 
-        //Controleur controleur = new Controleur(panelChoix, panelAtlantique, panelManche, this);
+    public void changementPanel (JPanel parPanel){
+        //this.removeAll();
+        this.remove(panelCentre);
+        panelCentre = parPanel;
+        this.add(panelCentre,BorderLayout.CENTER);
     }
 }

@@ -2,31 +2,22 @@ package vue;
 
 //import controleur.Controleur;
 
+import controleur.Controleur;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PanelChoix extends JPanel {
     JLabel labelChoisi;
-
     JLabel labelChoixDePort;
-
-    JButton boutonAtlantique;
-    JButton boutonManche;
-
-    public JComboBox<String> ChoixDePort;
-    String[] lesPorts = {"Atlantique", "Manche"};
-
+    public JButton boutonAtlantique;
+    public JButton boutonManche;
     public JLabel annonceChoix;
-
-    JLabel item1;
-    JLabel item2;
-
-    //Controleur controleur;
+    Controleur controleur;
 
     public PanelChoix() {
-        //PanelChoix s = new PanelChoix();
-
         setLayout(new GridBagLayout());
         GridBagConstraints contraintes = new GridBagConstraints();
         contraintes.insets = new Insets(6, 6, 6, 6);
@@ -46,8 +37,6 @@ public class PanelChoix extends JPanel {
         contraintes.gridwidth = 3;
         this.add(labelChoixDePort, contraintes);
 
-        //ChoixDePort.addItemListener(s);
-
         boutonAtlantique = new JButton("ATLANTIQUE");
         contraintes.gridx = 1; contraintes.gridy = 3;
         boutonAtlantique.setBackground(Color.LIGHT_GRAY);
@@ -57,39 +46,10 @@ public class PanelChoix extends JPanel {
         contraintes.gridx = 2; contraintes.gridy = 4;
         boutonManche.setBackground(Color.LIGHT_GRAY);
         this.add(boutonManche, contraintes);
+    }
 
-
-        /*
-        //ChoixDePort
-        ChoixDePort = new JComboBox<String>(lesPorts);
-        ChoixDePort.getEditor().getEditorComponent().setBackground(Color.GRAY);
-        contraintes.gridx = 1;
-        contraintes.gridy = 3;
-        contraintes.gridwidth = 2;
-        this.add(ChoixDePort, contraintes);
-         */
-
-        //zone annonceChoix
-        annonceChoix = new JLabel("");
-        contraintes.gridy = 4;
-        contraintes.gridx = 1;
-        this.add(annonceChoix, contraintes);
-/*
-        item1 = new JLabel("Atlantique sélectionné");
-        item1.setForeground(Color.BLUE);
-        item2 = new JLabel("Manche sélectionné");
-        item2.setForeground(Color.BLUE);*/
+    public void enregistreEcouteur (Controleur controleur) {
+        boutonAtlantique.addActionListener((ActionListener) controleur);
+        boutonManche.addActionListener((ActionListener) controleur);
     }
 }
-
-    /*public void itemStateChanged(ItemEvent e) {
-        if (e.getSource() == ChoixDePort) {
-
-            item1.setText(ChoixDePort.getSelectedItem() + "selected");
-        }
-    }*/
-/*
-    public void enregistreEcouteur (Controleur controleur) {
-        ChoixDePort.addActionListener((ActionListener) controleur);
-    }
-}*/
