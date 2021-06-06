@@ -37,12 +37,12 @@ public class PanelChoix extends JPanel {
         contraintes.gridwidth = 3;
         this.add(labelChoixDePort, contraintes);
 
-        boutonAtlantique = new JButton("ATLANTIQUE");
+        boutonAtlantique = new JButton("AUDIERNE");
         contraintes.gridx = 1; contraintes.gridy = 3;
         boutonAtlantique.setBackground(Color.LIGHT_GRAY);
         this.add(boutonAtlantique, contraintes);
 
-        boutonManche = new JButton("MANCHE");
+        boutonManche = new JButton("ST.MALO");
         contraintes.gridx = 2; contraintes.gridy = 4;
         boutonManche.setBackground(Color.LIGHT_GRAY);
         this.add(boutonManche, contraintes);

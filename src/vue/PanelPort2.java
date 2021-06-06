@@ -3,12 +3,12 @@ package vue;
 import javax.swing.*;
 import java.awt.*;
 
-public class PanelAtlantique extends JPanel {
+public class PanelPort2 extends JPanel {
     JLabel labelBienvenue;
 
-    public PanelAtlantique (){
+    public PanelPort2(){
         setLayout(new BorderLayout(20,20));
-        labelBienvenue= new JLabel("Atlantique");
+        labelBienvenue= new JLabel("Manche");
         this.add(labelBienvenue,BorderLayout.CENTER);
     }
 }
